@@ -31,5 +31,6 @@ brew bundle ~/Brewfile
 ### Change to latest version of bash
 
 ```bash
+# Edit /etc/shells and add /usr/local/bin/bash
 chsh -s /usr/local/bin/bash $USER
 ```
