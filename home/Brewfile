@@ -25,12 +25,15 @@ install bash-completion
 install wget --enable-iri
 
 # Install more recent versions of some OS X tools
+tap homebrew/dupes
+tap josegonzalez/homebrew-php
+
 install postgresql
 install vim --override-system-vi
-install homebrew/dupes/grep
-install homebrew/dupes/screen
-install homebrew/php/php55 --with-imap --with-pgsql --with-tidy
-install homebrew/php/php55-imagick
+install grep
+install screen
+install php55 --with-imap --with-pgsql --with-tidy
+install php55-imagick
 
 # Install other useful binaries
 install ack
