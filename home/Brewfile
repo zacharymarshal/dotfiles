@@ -34,11 +34,16 @@ install grep
 install screen
 install php55 --with-imap --with-pgsql --with-tidy
 install php55-imagick
+install php55-mcrypt
 
-# Install other useful binaries
+# Install Stuff
 install ack
 install git
 install node # This installs `npm` too using the recommended installation method
+install python
+install rabbitmq
+install php-cs-fixer
+install dnsmasq
 
 # Remove outdated versions from the cellar
 cleanup
