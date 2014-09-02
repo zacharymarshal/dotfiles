@@ -53,6 +53,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+# Turn off accent and allow repeating
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
