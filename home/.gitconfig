@@ -27,6 +27,18 @@
   # a.k.a. ‘delete merged’
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+  # Pull
+  p = pull
+
+  # Commit
+  c = commit
+
+  # Push
+  pu = push
+
+  # Checkout
+  co = checkout
+
 [color "branch"]
 
   current = yellow reverse
@@ -48,6 +60,8 @@
 
 [push]
   default = simple
+
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
