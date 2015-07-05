@@ -30,13 +30,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ## install brew cask
 
-```
+```bash
 brew install caskroom/cask/brew-cask
 ```
 
 ## install applications
 
-```
+```bash
 brew cask install 1password
 brew cask install atom
 brew cask install battle-net
@@ -56,9 +56,11 @@ brew cask cleanup
 
 ## install brew packages
 
-```
+```bash
 brew install ack
 brew install bash
+brew install composer
+brew install ctags
 brew install dnsmasq
 brew install git
 brew install gnu-sed --with-default-names
@@ -180,14 +182,14 @@ ssh-keygen -t rsa
 
 - ssh into all my servers and run it
 
-```
+```bash
 git pull
 ./bin/sshk-update
 ```
 
 ### add ssh passphrase to keychain
 
-```
+```bash
 /usr/bin/ssh-add -K ~/.ssh/id_rsa.Zacharys-MacBook-Pro-2
 ```
 
@@ -275,3 +277,11 @@ Login items:
 - Dropbox
 - Caffeine
 - Divvy
+
+# php setup
+
+```bash
+composer global require fabpot/php-cs-fixer
+composer global require phpmd/phpmd
+composer global require squizlabs/php_codesniffer
+```
