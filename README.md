@@ -37,6 +37,7 @@ brew install caskroom/cask/brew-cask
 ## install applications
 
 ```bash
+brew cask update
 brew cask install 1password
 brew cask install atom
 brew cask install battle-net
@@ -59,6 +60,7 @@ brew cask cleanup
 ```bash
 brew install ack
 brew install bash
+brew install cloc
 brew install composer
 brew install ctags
 brew install dnsmasq
@@ -68,6 +70,7 @@ brew install homebrew/dupes/grep --with-default-names
 brew install homebrew/php/php55 --with-postgresql
 brew install homebrew/versions/bash-completion2
 brew install node
+brew install wget
 
 brew cleanup
 ```
