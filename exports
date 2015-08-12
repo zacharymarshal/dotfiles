@@ -1,7 +1,7 @@
 # Make vim the default editor
-export EDITOR="atom -w";
-export PSQL_EDITOR="atom -w"
-export GIT_EDITOR="atom -w"
+export EDITOR="atom --wait";
+export PSQL_EDITOR="atom --wait"
+export GIT_EDITOR="atom --wait"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;

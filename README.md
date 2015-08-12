@@ -288,3 +288,10 @@ composer global require fabpot/php-cs-fixer
 composer global require phpmd/phpmd
 composer global require squizlabs/php_codesniffer
 ```
+
+# npm globals
+
+```bash
+npm install -g faucet
+npm install -g watch
+```
