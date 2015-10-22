@@ -44,8 +44,9 @@ brew cask install battle-net
 brew cask install caskroom/homebrew-versions/java6
 brew cask install caskroom/homebrew-versions/sublime-text3
 brew cask install dropbox
-brew cask install github
+brew cask install github-desktop
 brew cask install google-chrome
+brew cask install haskell-platform
 brew cask install phpstorm
 brew cask install postgres
 brew cask install spotify
@@ -71,6 +72,7 @@ brew install homebrew/php/php55 --with-postgresql
 brew install homebrew/versions/bash-completion2
 brew install node
 brew install wget
+brew install mongodb
 
 brew cleanup
 ```
@@ -294,4 +296,13 @@ composer global require squizlabs/php_codesniffer
 ```bash
 npm install -g faucet
 npm install -g watch
+npm install -g eslint
+npm install -g bower
+```
+
+# setup sublime
+
+```bash
+ln -s ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+ln -s ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages/
 ```
