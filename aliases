@@ -3,13 +3,15 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
+alias ~="cd ~" #	 `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
+alias cd-atd="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/allthedata/"
+alias cd-atd-master="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/allthedata/master"
+alias cd-stannis="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/stannis"
+alias cd-stannis-plugin="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/stannis/plugin/public"
+alias cd-dev-vagrant="cd /Volumes/illuminate-dev/dev-vagrant/"
 alias g="git"
 alias h="history"
 

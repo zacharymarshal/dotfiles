@@ -41,14 +41,15 @@ brew cask update
 brew cask install 1password
 brew cask install atom
 brew cask install battle-net
-brew cask install caskroom/homebrew-versions/java6
-brew cask install caskroom/homebrew-versions/sublime-text3
+brew cask install caskroom/versions/java6
+brew cask install caskroom/versions/sublime-text3
 brew cask install dropbox
 brew cask install github-desktop
 brew cask install google-chrome
 brew cask install haskell-platform
 brew cask install phpstorm
 brew cask install postgres
+brew cask install slack
 brew cask install spotify
 brew cask install vagrant
 brew cask install virtualbox
@@ -67,12 +68,16 @@ brew install ctags
 brew install dnsmasq
 brew install git
 brew install gnu-sed --with-default-names
+brew install gpg
+brew install homebrew/apache/ab
 brew install homebrew/dupes/grep --with-default-names
 brew install homebrew/php/php55 --with-postgresql
+brew install homebrew/science/opencv
 brew install homebrew/versions/bash-completion2
 brew install node
 brew install wget
 brew install mongodb
+brew install zbar
 
 brew cleanup
 ```
@@ -294,10 +299,12 @@ composer global require squizlabs/php_codesniffer
 # npm globals
 
 ```bash
-npm install -g faucet
-npm install -g watch
-npm install -g eslint
 npm install -g bower
+npm install -g eslint
+npm install -g faucet
+npm install -g grunt-cli
+npm install -g watch
+npm install -g jsdoc
 ```
 
 # setup sublime
