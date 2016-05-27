@@ -47,6 +47,7 @@ brew cask install dropbox
 brew cask install github-desktop
 brew cask install google-chrome
 brew cask install haskell-platform
+brew cask install pgadmin3
 brew cask install phpstorm
 brew cask install postgres
 brew cask install slack
@@ -107,6 +108,7 @@ ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/path ~/.path
 ln -sF ~/dotfiles/bin ~/
 ln -sF ~/dotfiles/init ~/
+ln -sf ~/dotfiles/eslintrc ~/.eslintrc
 ```
 
 ## setup terminal
@@ -300,16 +302,23 @@ composer global require squizlabs/php_codesniffer
 
 ```bash
 npm install -g bower
+npm install -g ember-cli
 npm install -g eslint
 npm install -g faucet
 npm install -g grunt-cli
-npm install -g watch
 npm install -g jsdoc
+npm install -g watch
 ```
 
 # setup sublime
 
 ```bash
-ln -s ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-ln -s ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages/
+ln -sf ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+ln -sf ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+```
+
+# setup atom
+
+```bash
+ln -sf ~/Dropbox/Application\ Support/Atom .atom
 ```
