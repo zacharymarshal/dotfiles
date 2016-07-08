@@ -18,6 +18,16 @@ I eventually need to automate all of these steps. I tried with boxen and was not
 - Slack
 - The Unarchiver
 
+## install some other apps
+
+- Karabiner https://pqrs.org/osx/karabiner/
+
+## some mac defaults
+
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
 ## install command line tools
 
 Type `git` into Terminal, you will be prompted to install the CLI tools
