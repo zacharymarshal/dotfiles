@@ -1,3 +1,6 @@
+# Atom
+alias atom="atom-beta"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
