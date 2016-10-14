@@ -79,18 +79,23 @@ brew install ctags
 brew install dnsmasq
 brew install git
 brew install gnu-sed --with-default-names
+brew install go
 brew install gpg
 brew install homebrew/apache/ab
 brew install homebrew/dupes/grep --with-default-names
 brew install homebrew/php/php55 --with-postgresql
 brew install homebrew/science/opencv
 brew install homebrew/versions/bash-completion2
+brew install hub
 brew install node
+brew install rbenv
+brew install ruby-build
 brew install wget
 brew install mongodb
 brew install zbar
 
 brew cleanup
+sudo gem update --system
 ```
 
 ## github app setup
@@ -119,6 +124,7 @@ ln -sf ~/dotfiles/path ~/.path
 ln -sF ~/dotfiles/bin ~/
 ln -sF ~/dotfiles/init ~/
 ln -sf ~/dotfiles/eslintrc ~/.eslintrc
+ln -sf ~/dotfiles/gemrc ~/.gemrc
 ```
 
 ## setup terminal
