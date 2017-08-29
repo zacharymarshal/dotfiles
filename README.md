@@ -68,6 +68,12 @@ brew cask install virtualbox
 brew cask cleanup
 ```
 
+## brew taps
+
+```bash
+brew tap homebrew/services
+```
+
 ## install brew packages
 
 ```bash
@@ -90,6 +96,9 @@ brew install hub
 brew install node
 brew install rbenv
 brew install ruby-build
+brew install reattach-to-user-namespace
+brew install the_silver_searcher
+brew install tmux
 brew install wget
 brew install mongodb
 brew install zbar
@@ -125,6 +134,8 @@ ln -sF ~/dotfiles/bin ~/
 ln -sF ~/dotfiles/init ~/
 ln -sf ~/dotfiles/eslintrc ~/.eslintrc
 ln -sf ~/dotfiles/gemrc ~/.gemrc
+ln -sf ~/dotfiles/vimrc ~/.vimrc
+ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ## setup terminal

@@ -72,4 +72,5 @@
   smudge = git-lfs smudge %f
   required = true
 [core]
-  editor = atom --wait
+  editor = vim
+
