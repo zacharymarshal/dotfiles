@@ -122,6 +122,7 @@ chsh -s /usr/local/bin/bash $USER
 - clone dotfiles/ to ~/ using Github App
 
 ```bash
+ln -sf ~/dotfiles/agignore ~/.agignore
 ln -sf ~/dotfiles/aliases ~/.aliases
 ln -sf ~/dotfiles/bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/bash_prompt ~/.bash_prompt
