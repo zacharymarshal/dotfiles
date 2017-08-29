@@ -97,3 +97,7 @@ set colorcolumn=+1
 " Numbers
 set number
 set numberwidth=5
+
+" Backups in a tmp directory
+set backupdir=~/.tmp
+set directory=~/.tmp
