@@ -12,11 +12,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'godlygeek/tabular'
 
 " Colors
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,16 +44,23 @@ endfor
 " Configure my namespace to be SPACE
 let mapleader = "\<Space>"
 
-nnoremap <C-e> :ls <cr> :b<space>     " Switch between buffers
-nmap <leader>e :b# <cr>               " Switch between most recent buffer
-nmap <leader>so :source $MYVIMRC <cr> " Reload vimrc changes
-nmap <leader>o o<esc>                 " Insert new line after current line
-nmap <leader>O O<esc>                 " Insert new line before current line
+" Switch between buffers
+nnoremap <C-e> :ls <cr> :b<space>
+" Switch between most recent buffer
+nmap <leader>e :b# <cr>
+" Reload vimrc changes
+nmap <leader>so :source $MYVIMRC <cr>
+" Insert new line after current line
+nmap <leader>o o<esc>
+" Insert new line before current line
+nmap <leader>O O<esc>
 
 set number                      " Display line numbers beside buffer
-set nocompatible                " Don't maintain compatibilty with Vi.
+set relativenumber
+" Don't update while executing macros
+" this keeps my show recent buffers macro workin
+set lazyredraw
 set hidden                      " Allow buffer change w/o saving
-set lazyredraw                  " Don't update while executing macros
 set backspace=indent,eol,start  " Sane backspace behavior
 set history=1000                " Remember last 1000 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
@@ -62,14 +69,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-" Colors
-syntax enable
-set background=dark
-colorscheme solarized
-set guifont=Inconsolata:h24
-
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+set list listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -78,12 +79,6 @@ set nojoinspaces
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
 
   if !exists(":Ag")
     command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -95,6 +90,10 @@ endif
 set textwidth=80
 set colorcolumn=+1
 
+" Colors
+syntax on
+color dracula
+
 " Numbers
 set number
 set numberwidth=5
@@ -102,3 +101,16 @@ set numberwidth=5
 " Backups in a tmp directory
 set backupdir=~/.tmp
 set directory=~/.tmp
+
+" Enable built-in matchit plugin
+" Using the % to find the matching brace, tag etc
+runtime macros/matchit.vim
+
+" Tabularize (Aligning =>)
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+nmap <Leader>aa :Tabularize /=><CR>
+vmap <Leader>aa :Tabularize /=><CR>
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
