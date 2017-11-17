@@ -7,11 +7,6 @@ alias ~="cd ~" #	 `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias cd-atd="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/allthedata/"
-alias cd-atd-master="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/allthedata/master"
-alias cd-stannis="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/stannis"
-alias cd-stannis-plugin="cd /Volumes/illuminate-dev/dev-vagrant/illuminate/codebase/stannis/plugin/public"
-alias cd-dev-vagrant="cd /Volumes/illuminate-dev/dev-vagrant/"
 alias g="git"
 alias h="history"
 
@@ -38,16 +33,10 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Work In Progress (wip)
 # These features allow to pause a branch development and switch to another one (wip)
@@ -55,6 +44,5 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 #
 # This function return a warning if the current branch is a wip
 
-XARGS_OPTS=&>/dev/null xargs -r && XARGS_OPTS+="-r"
 alias gwip="git add -A; git ls-files --deleted -z | xargs ${XARGS_OPTS} -0 git rm; git commit -m \"--wip--\""
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
