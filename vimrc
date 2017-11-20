@@ -15,6 +15,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'jiangmiao/auto-pairs'
 
 " Colors
 Plugin 'dracula/vim'
@@ -35,26 +37,25 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-" Unbind the cursor keys in insert, normal and visual modes.
-for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-    exe prefix . "noremap " . key . " <Nop>"
-  endfor
-endfor
+" Unbind the cursor keys
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Configure my namespace to be SPACE
 let mapleader = "\<Space>"
 
-" Switch between buffers
-nnoremap <C-e> :ls <cr> :b<space>
 " Switch between most recent buffer
-nmap <leader>e :b# <cr>
+nmap <leader>e <c-^>
 " Reload vimrc changes
 nmap <leader>so :source $MYVIMRC <cr>
 " Insert new line after current line
 nmap <leader>o o<esc>
 " Insert new line before current line
 nmap <leader>O O<esc>
+" Paste mode
+set pastetoggle=<F2>
 
 set number                      " Display line numbers beside buffer
 set relativenumber
@@ -67,8 +68,10 @@ set history=1000                " Remember last 1000 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
 set showcmd                     " Show commands at the bottom right
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set autowrite
 
 " Display extra whitespace
 set list listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
@@ -118,6 +121,42 @@ runtime macros/matchit.vim
 nmap <Leader>aa :Tabularize /=><CR>
 vmap <Leader>aa :Tabularize /=><CR>
 
-" Search down into subfolders
-" Provides tab-completion for all file-related tasks
-set path+=**
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
+
+augroup filetype_php
+  autocmd!
+  autocmd FileType php set tabstop=4
+  autocmd FileType php set shiftwidth=2
+augroup END
+
+
+" search settings
+" ---------------
+
+set incsearch " highlight while searching
+set hlsearch  " highlight all matches
+
+" clear highlight of search
+nmap <leader>h :nohlsearch<cr>
+
+set ignorecase " case insensitive search
+set smartcase  " case sensitive mode if I put a capital letter
+
+" vim-surround settings
+" ---------------------
+
+nmap <leader>' cs"'
+nmap <leader>" cs'"
