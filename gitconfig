@@ -9,8 +9,8 @@
   # Cherry pick merge
   cpm = cherry-pick -m 1 --no-commit
 
-  # View abbreviated SHA, description, and history graph of the latest 20 commits
-  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  # Nice overall view of the commit log
+  l = log --oneline --graph --decorate --abbrev-commit --all
 
   # View the current working tree status using the short format
   s = status -s
