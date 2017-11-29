@@ -136,12 +136,13 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
+" PHP settings
+" ------------
 augroup filetype_php
   autocmd!
-  autocmd FileType php set tabstop=4
-  autocmd FileType php set shiftwidth=2
+  autocmd BufNewFile,BufRead *.phpt set filetype=php
+  autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
-
 
 " search settings
 " ---------------
