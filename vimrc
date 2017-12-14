@@ -144,6 +144,16 @@ augroup filetype_php
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 
+" Git message settings
+" --------------------
+
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Markdown settings
+" -----------------
+
+autocmd BufNewFile,BufRead *.txt set filetype=markdown
+
 " search settings
 " ---------------
 
