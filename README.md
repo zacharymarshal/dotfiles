@@ -144,34 +144,27 @@ mkdir ~/.tmp
 
 ## setup terminal
 
-```bash
-open ~/init/Solarized\ Dark\ xterm-256color.terminal
-```
+- Install Dracula theme https://draculatheme.com/terminal/
+- Install Roboto Mono font, https://fonts.google.com/specimen/Roboto+Mono?selection.family=Roboto+Mono
 
 ### set some preferences
 
-- Set Solarized Dark as the Default Profile
-- Set font to Monaco 20pt
-- Advanced > Bell > [Disable] Audio bell & Only when sound is muted
+- Set Dracula as the Default Profile
+- Set font to Roboto Mono Light 20pt
+- Advanced > Bell > [Disable] **All** but Visual Bell
+- Advanced > Keyboard > [Enable] Use Option as Meta key
 
 ## setup dropbox
 
-### selective sync, don't include
+### selective sync
 
-- Camera Uploads
-- Carousel
-- OTCD
-- Photos
+- Application Support
+- Screenshots
+- Wallpapers
 
 ### turn off camera uploads
 
 Preferences > Import > [ ] Enable camera uploads
-
-## setup caffine
-
-- Automatically start at login
-- Activate at launch
-- Default duration 2 hours
 
 ## setup divvy
 
