@@ -354,3 +354,10 @@ ln -sf ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages ~/Library/Applic
 ```bash
 ln -sf ~/Dropbox/Application\ Support/Atom .atom
 ```
+
+# setup Dash
+
+## General
+
+- [Enable] Launch at Login
+- Set up Syncing -> Set Sync Folder to Dropbox
