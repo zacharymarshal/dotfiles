@@ -9,18 +9,14 @@ I eventually need to automate all of these steps. I tried with boxen and was not
 
 ## install apps via app store
 
-- Caffeine
-- Dash 2
 - Divvy
-- LimeChat
-- Numbers
-- Pages
 - Slack
 - The Unarchiver
 
 ## install some other apps
 
 - Karabiner https://pqrs.org/osx/karabiner/
+- Dash https://kapeli.com/dash
 
 ## some mac defaults
 
