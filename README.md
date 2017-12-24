@@ -258,6 +258,7 @@ pbcopy < ~/.ssh/id_rsa.Zacharys-MacBook-Pro-2.pub
 
 - Screen Saver
 -- [Enable] Show with clock
+-- Hot corner bottom right to start screensaver
 
 ### dock
 
@@ -273,7 +274,7 @@ pbcopy < ~/.ssh/id_rsa.Zacharys-MacBook-Pro-2.pub
 
 Search Results
 
-- [Disable] All, **except** Applications
+- [Disable] All, **except** Applications and System Preferences
 - [Disable] Allow Spotlight Suggestions in Spotlight and Look up
 
 Privacy
