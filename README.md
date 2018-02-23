@@ -345,7 +345,12 @@ ln -sf ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages ~/Library/Applic
 # setup atom
 
 ```bash
-ln -sf ~/Dropbox/Application\ Support/Atom .atom
+ln -sf ~/Dropbox/Application\ Support/Atom/config.cson .atom/config.cson
+ln -sf ~/Dropbox/Application\ Support/Atom/github.cson .atom/github.cson
+ln -sf ~/Dropbox/Application\ Support/Atom/init.coffee .atom/init.coffee
+ln -sf ~/Dropbox/Application\ Support/Atom/keymap.cson .atom/keymap.cson
+ln -sf ~/Dropbox/Application\ Support/Atom/snippets.cson .atom/snippets.cson
+ln -sf ~/Dropbox/Application\ Support/Atom/styles.less .atom/styles.less
 ```
 
 # setup Dash
