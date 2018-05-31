@@ -17,6 +17,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'terryma/vim-multiple-cursors'
+
+Plugin 'fatih/vim-go'
 
 " Colors
 Plugin 'dracula/vim'
@@ -54,6 +57,7 @@ nmap <leader>so :source $MYVIMRC <cr>
 nmap <leader>o o<esc>
 " Insert new line before current line
 nmap <leader>O O<esc>
+nmap <leader>= =i}
 " Paste mode
 set pastetoggle=<F2>
 
@@ -70,11 +74,12 @@ set showcmd                     " Show commands at the bottom right
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set shiftround
 set autowrite
 
 " Display extra whitespace
-set list listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+" set list listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -153,6 +158,14 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " -----------------
 
 autocmd BufNewFile,BufRead *.txt set filetype=markdown
+
+" Go settings
+" ------------
+augroup filetype_go
+  autocmd!
+  autocmd BufNewFile,BufRead *.go set filetype=go
+  autocmd FileType go setlocal shiftwidth=4 tabstop=4 noexpandtab
+augroup END
 
 " search settings
 " ---------------
