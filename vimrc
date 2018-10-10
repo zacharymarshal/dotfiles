@@ -19,6 +19,8 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'rizzatti/dash.vim'
+
 Plugin 'fatih/vim-go'
 
 " Colors
@@ -79,7 +81,7 @@ set shiftround
 set autowrite
 
 " Display extra whitespace
-" set list listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set list listchars=tab:\ \ ,trail:•
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -107,7 +109,7 @@ set colorcolumn=+1
 
 " Colors
 syntax on
-color dracula
+color bw
 
 " Numbers
 set number
@@ -149,6 +151,14 @@ augroup filetype_php
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 
+" HTML settings
+" ------------
+augroup filetype_html
+  autocmd!
+  autocmd BufNewFile,BufRead *.phtml set filetype=html
+  autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+augroup END
+
 " Git message settings
 " --------------------
 
@@ -184,3 +194,7 @@ set smartcase  " case sensitive mode if I put a capital letter
 
 nmap <leader>' cs"'
 nmap <leader>" cs'"
+
+" Dash
+" --------------------
+nmap <silent> <leader>d <Plug>DashSearch
