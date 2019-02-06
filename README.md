@@ -210,7 +210,7 @@ CMD + ALT + UP ARROW    # fullscreen
 ```
 cd ~/.ssh
 ssh-keygen -t rsa
-# 1. put into id_rsa.Zacharys-MacBook-Pro-3
+# 1. put into id_rsa.Zacharys-MacBook-Pro
 # 2. use a passphrase
 # 3. update access_keys file
 ./bin/sshk-update
@@ -226,13 +226,13 @@ git pull
 ### add ssh passphrase to keychain
 
 ```bash
-/usr/bin/ssh-add -K ~/.ssh/id_rsa.Zacharys-MacBook-Pro-2
+/usr/bin/ssh-add -K ~/.ssh/id_rsa.Zacharys-MacBook-Pro
 ```
 
 ### update github with new public key
 
 ```bash
-pbcopy < ~/.ssh/id_rsa.Zacharys-MacBook-Pro-2.pub
+pbcopy < ~/.ssh/id_rsa.Zacharys-MacBook-Pro.pub
 ```
 
 ## update some system preferences
@@ -312,45 +312,35 @@ Scroll & Zoom
 Login items:
 
 - Dropbox
-- Caffeine
 - Divvy
 
-# php setup
+# ohmyzsh setup
 
 ```bash
-composer global require fabpot/php-cs-fixer
-composer global require phpmd/phpmd
-composer global require squizlabs/php_codesniffer
+# Install ohmyzsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Give it some links
+ln -sf ~/Dropbox/Application\ Support/zsh_history ~/.zsh_history
+ln -sf ~/dotfiles/zulu.zsh-theme ~/.oh-my-zsh/themes/zulu.zsh-theme
+ln -sf ~/dotfiles/zshrc ~/.zshrc
 ```
 
-# npm globals
+# vim setup
 
 ```bash
-npm install -g bower
-npm install -g ember-cli
-npm install -g eslint
-npm install -g faucet
-npm install -g grunt-cli
-npm install -g jsdoc
-npm install -g watch
-```
+ln -sf ~/dotfiles/vimrc ~/.vimrc
 
-# setup sublime
+# Setup tmp dir for swp files
+mkdir -p ~/.tmp
 
-```bash
-ln -sf ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-ln -sf ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-```
+# Install color theme
+mkdir -p ~/.vim/colors
+ln -sf ~/dotfiles/init/bw.vim ~/.vim/colors/bw.vim
 
-# setup atom
-
-```bash
-ln -sf ~/Dropbox/Application\ Support/Atom/config.cson .atom/config.cson
-ln -sf ~/Dropbox/Application\ Support/Atom/github.cson .atom/github.cson
-ln -sf ~/Dropbox/Application\ Support/Atom/init.coffee .atom/init.coffee
-ln -sf ~/Dropbox/Application\ Support/Atom/keymap.cson .atom/keymap.cson
-ln -sf ~/Dropbox/Application\ Support/Atom/snippets.cson .atom/snippets.cson
-ln -sf ~/Dropbox/Application\ Support/Atom/styles.less .atom/styles.less
+# Setup Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 ```
 
 # setup Dash
