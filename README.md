@@ -34,15 +34,10 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## brew taps
-
-```bash
-brew tap homebrew/services
-```
-
 ## install brew packages
 
 ```bash
+brew install dnsmasq
 brew install gnu-sed
 brew install hub
 brew install the_silver_searcher
@@ -50,6 +45,12 @@ brew install tmux
 brew install vim
 
 brew cleanup
+```
+
+## run dnsmasq services
+
+```
+sudo brew services start dnsmasq
 ```
 
 ## github app setup
