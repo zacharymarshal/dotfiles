@@ -9,14 +9,18 @@ I eventually need to automate all of these steps. I tried with boxen and was not
 
 ## install apps via app store
 
+- 1Password
+- Bear
 - Divvy
 - Slack
-- The Unarchiver
 
 ## install some other apps
 
-- Karabiner https://pqrs.org/osx/karabiner/
+- Google Chrome https://www.google.com/chrome/browser/
 - Dash https://kapeli.com/dash
+- Spotify https://www.spotify.com/us/download/mac/
+- Dropbox https://www.dropbox.com/downloading
+- Docker https://hub.docker.com/editions/community/docker-ce-desktop-mac
 
 ## some mac defaults
 
@@ -24,44 +28,10 @@ I eventually need to automate all of these steps. I tried with boxen and was not
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
-## install command line tools
-
-Type `git` into Terminal, you will be prompted to install the CLI tools
-
 ## install homebrew http://brew.sh
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-## install brew cask
-
-```bash
-brew install caskroom/cask/brew-cask
-```
-
-## install applications
-
-```bash
-brew cask update
-brew cask install 1password
-brew cask install atom
-brew cask install battle-net
-brew cask install caskroom/versions/java6
-brew cask install caskroom/versions/sublime-text3
-brew cask install dropbox
-brew cask install github-desktop
-brew cask install google-chrome
-brew cask install haskell-platform
-brew cask install pgadmin3
-brew cask install phpstorm
-brew cask install postgres
-brew cask install slack
-brew cask install spotify
-brew cask install vagrant
-brew cask install virtualbox
-
-brew cask cleanup
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ## brew taps
@@ -73,34 +43,13 @@ brew tap homebrew/services
 ## install brew packages
 
 ```bash
-brew install ack
-brew install bash
-brew install cloc
-brew install composer
-brew install ctags
-brew install dnsmasq
-brew install git
-brew install gnu-sed --with-default-names
-brew install go
-brew install gpg
-brew install homebrew/apache/ab
-brew install homebrew/dupes/grep --with-default-names
-brew install homebrew/php/php55 --with-postgresql
-brew install homebrew/science/opencv
-brew install homebrew/versions/bash-completion2
+brew install gnu-sed
 brew install hub
-brew install node
-brew install rbenv
-brew install ruby-build
-brew install reattach-to-user-namespace
 brew install the_silver_searcher
 brew install tmux
-brew install wget
-brew install mongodb
-brew install zbar
+brew install vim
 
 brew cleanup
-sudo gem update --system
 ```
 
 ## github app setup
@@ -118,28 +67,11 @@ chsh -s /usr/local/bin/bash $USER
 - clone dotfiles/ to ~/ using Github App
 
 ```bash
-ln -sf ~/dotfiles/agignore ~/.agignore
-ln -sf ~/dotfiles/aliases ~/.aliases
-ln -sf ~/dotfiles/bash_profile ~/.bash_profile
-ln -sf ~/dotfiles/bash_prompt ~/.bash_prompt
-ln -sf ~/dotfiles/bashrc ~/.bashrc
-ln -sf ~/dotfiles/exports ~/.exports
-ln -sf ~/dotfiles/functions ~/.functions
 ln -sf ~/dotfiles/gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/path ~/.path
-ln -sF ~/dotfiles/bin ~/
-ln -sF ~/dotfiles/init ~/
-ln -sf ~/dotfiles/eslintrc ~/.eslintrc
-ln -sf ~/dotfiles/gemrc ~/.gemrc
+ln -sf ~/dotfiles/bin ~/bin
 ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/inputrc ~/.inputrc
-```
-
-## setup some default dirs
-
-```bash
-mkdir ~/.tmp
 ```
 
 ## setup terminal
@@ -177,9 +109,9 @@ Preferences > Import > [ ] Enable camera uploads
 - Mark as global shortcut for each
 
 ```
-CMD + ALT + LEFT ARROW  # left
-CMD + ALT + RIGHT ARROW # right
-CMD + ALT + UP ARROW    # fullscreen
+CTRL + ALT + LEFT ARROW  # left
+CTRL + ALT + RIGHT ARROW # right
+CTRL + ALT + UP ARROW    # fullscreen
 ```
 
 ## 1password setup
@@ -200,7 +132,8 @@ CMD + ALT + UP ARROW    # fullscreen
 
 ## chrome setup
 
-- login to illuminate account & link data
+- login to Kelvin account & link data
+- login to The Weekend Programmer account & link data
 - add person & login to personal account
 
 ## ssh keys setup
