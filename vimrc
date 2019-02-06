@@ -62,9 +62,9 @@ nmap <leader>O O<esc>
 nmap <leader>= =i}
 " Paste mode
 set pastetoggle=<F2>
+" Add semi-colon to end of line
+nmap <leader>; m`A;<esc>``
 
-set number                      " Display line numbers beside buffer
-set relativenumber
 " Don't update while executing macros
 " this keeps my show recent buffers macro workin
 set lazyredraw
@@ -79,6 +79,8 @@ set shiftwidth=2
 set softtabstop=2
 set shiftround
 set autowrite
+
+set nostartofline " Don't go to beginning of line when switching buffers
 
 " Display extra whitespace
 set list listchars=tab:\ \ ,trail:•
@@ -112,7 +114,7 @@ syntax on
 color bw
 
 " Numbers
-set number
+set nonumber
 set numberwidth=5
 
 " Backups in a tmp directory

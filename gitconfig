@@ -1,7 +1,7 @@
 [user]
 
-  name = Zachary Rankin
-  email = rankin.zachary@gmail.com
+	name = Zachary Rankin
+	email = rankin.zachary@gmail.com
   signingkey = 99344343
 
 [alias]
@@ -39,6 +39,8 @@
 
   # Checkout
   co = checkout
+	uncommit = reset --soft HEAD^
+	unstage = reset
 
 [color "branch"]
 
@@ -68,9 +70,10 @@
   smudge = git media smudge %f
 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 [core]
   editor = vim
 
