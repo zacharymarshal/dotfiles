@@ -69,6 +69,7 @@ chsh -s /usr/local/bin/bash $USER
 
 ```bash
 ln -sf ~/dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/gitconfig-kelvin ~/.gitconfig-kelvin
 ln -sf ~/dotfiles/bin ~/bin
 ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf

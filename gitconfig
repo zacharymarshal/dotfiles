@@ -77,3 +77,5 @@
 [core]
   editor = vim
 
+[includeIf "gitdir:/**/kelvineducation/"]
+  path = .gitconfig-kelvin
