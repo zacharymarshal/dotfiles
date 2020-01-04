@@ -23,6 +23,9 @@ Plugin 'rizzatti/dash.vim'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-entire'
+
 " Colors
 Plugin 'dracula/vim'
 
@@ -65,6 +68,16 @@ set pastetoggle=<F2>
 " Add semi-colon to end of line
 nmap <leader>; m`A;<esc>``
 
+" Apply dot command to visual mode
+xnoremap . :normal .<CR>
+" Apply macro to visual mode selection
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
 " Don't update while executing macros
 " this keeps my show recent buffers macro workin
 set lazyredraw
@@ -79,6 +92,12 @@ set shiftwidth=2
 set softtabstop=2
 set shiftround
 set autowrite
+" Always show the filename
+set laststatus=2
+set statusline=%t
+set statusline+=%=
+set statusline+=%c,
+set statusline+=%l/%L
 
 set nostartofline " Don't go to beginning of line when switching buffers
 
@@ -112,6 +131,7 @@ set colorcolumn=+1
 " Colors
 syntax on
 color bw
+let html_my_rendering=1
 
 " Numbers
 set nonumber
