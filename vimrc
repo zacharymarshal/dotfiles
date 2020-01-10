@@ -15,19 +15,16 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-eunuch'
+" Plugin 'tpope/vim-eunuch'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'terryma/vim-multiple-cursors'
-
-Plugin 'rizzatti/dash.vim'
+" Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'fatih/vim-go'
 
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 
-" Colors
-Plugin 'dracula/vim'
+" Plugin 'StanAngeloff/php.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -137,6 +134,9 @@ let html_my_rendering=1
 set nonumber
 set numberwidth=5
 
+" Save my life
+set autoindent
+
 " Backups in a tmp directory
 set backupdir=~/.tmp
 set directory=~/.tmp
@@ -167,10 +167,11 @@ inoremap <S-Tab> <c-n>
 
 " PHP settings
 " ------------
+
 augroup filetype_php
   autocmd!
   autocmd BufNewFile,BufRead *.phpt set filetype=php
-  autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+  autocmd FileType php setlocal syntax=txt shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
 augroup END
 
 " HTML settings
