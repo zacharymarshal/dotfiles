@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/opt/gnu-sed/libexec/gnubin:/Applications/Postgres.app/Contents/Versions/11/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/zacharyrankin/.oh-my-zsh

@@ -74,6 +74,7 @@ ln -sf ~/dotfiles/bin ~/bin
 ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/inputrc ~/.inputrc
+ln -sf ~/dotfiles/psqlrc ~/.psqlrc
 ```
 
 ## setup terminal
@@ -284,3 +285,11 @@ vim +PluginInstall +qall
 
 - [Enable] Launch at Login
 - Set up Syncing -> Set Sync Folder to Dropbox
+
+# setup psql
+
+- Install Postgres.app
+- Create some links for our history:
+```
+ln -sf ~/Dropbox/Application\ Support/psql ~/.psql
+```
