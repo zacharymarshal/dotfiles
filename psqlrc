@@ -1,10 +1,11 @@
 \set QUIET 1
 
-\set ON_ERROR_ROLLBACK interactive
 \set HISTFILE ~/.psql/history- :DBNAME
+\set HISTSIZE 1000000
 \set HISTCONTROL ignoredups
+
+\set ON_ERROR_ROLLBACK interactive
 \set COMP_KEYWORD_CASE upper
-\set HISTSIZE 10000
 
 \x auto
 \pset linestyle unicode
