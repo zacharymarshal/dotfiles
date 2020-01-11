@@ -13,16 +13,15 @@ syntax reset
 
 let g:colors_name="bw"
 
-hi ColorColumn ctermfg=NONE ctermbg=8 cterm=NONE
-hi IncSearch ctermfg=17 ctermbg=215 cterm=NONE
-hi Search ctermfg=17 ctermbg=84 cterm=NONE
-hi StatusLine ctermfg=8 ctermbg=NONE cterm=NONE
-hi StatusLineNC ctermfg=NONE ctermbg=8 cterm=NONE
-hi Comment ctermfg=8
-" hi Visual NONE
+hi Normal ctermfg=White ctermbg=Black cterm=NONE
+hi ColorColumn ctermfg=NONE ctermbg=DarkGray cterm=NONE
+hi IncSearch ctermfg=White ctermbg=DarkYellow cterm=NONE
+hi Search ctermfg=White ctermbg=DarkYellow cterm=NONE
+hi StatusLine ctermfg=Gray ctermbg=DarkGray cterm=NONE
+hi StatusLineNC ctermfg=NONE ctermbg=DarkGray cterm=NONE
+hi Comment ctermfg=Gray
+hi Visual ctermfg=White ctermbg=DarkGray cterm=NONE
 " hi VisualNOS NONE
-" hi Normal NONE
-
 
 hi Boolean NONE
 hi Character NONE
