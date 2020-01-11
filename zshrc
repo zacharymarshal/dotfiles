@@ -48,6 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HISTFILE="$HOME/.zsh/history"
 HIST_STAMPS="yyyy-mm-dd"
 HISTSIZE=10000000
 SAVEHIST=10000000

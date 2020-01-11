@@ -260,6 +260,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ln -sf ~/Dropbox/Application\ Support/zsh_history ~/.zsh_history
 ln -sf ~/dotfiles/zulu.zsh-theme ~/.oh-my-zsh/themes/zulu.zsh-theme
 ln -sf ~/dotfiles/zshrc ~/.zshrc
+ln -sf ~/Dropbox/Application\ Support/zsh ~/.zsh
 ```
 
 # vim setup
