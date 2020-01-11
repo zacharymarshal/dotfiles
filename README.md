@@ -71,7 +71,6 @@ chsh -s /usr/local/bin/bash $USER
 ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/gitconfig-kelvin ~/.gitconfig-kelvin
 ln -sf ~/dotfiles/bin ~/bin
-ln -sf ~/dotfiles/vimrc ~/.vimrc
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/inputrc ~/.inputrc
 ln -sf ~/dotfiles/psqlrc ~/.psqlrc
@@ -257,10 +256,16 @@ Login items:
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Give it some links
-ln -sf ~/Dropbox/Application\ Support/zsh_history ~/.zsh_history
-ln -sf ~/dotfiles/zulu.zsh-theme ~/.oh-my-zsh/themes/zulu.zsh-theme
 ln -sf ~/dotfiles/zshrc ~/.zshrc
-ln -sf ~/Dropbox/Application\ Support/zsh ~/.zsh
+ln -sf ~/Dropbox/Application\ Support/zsh_history ~/.zsh_history
+mkdir -p ~/.zsh/themes
+ln -sf ~/dotfiles/zulu.zsh-theme ~/.zsh/themes/zulu.zsh-theme
+
+# On Linode
+ln -sf ~/dotfiles/zsh_linode ~/.zsh/zsh_linode.zsh
+
+# On Mac
+ln -sf ~/dotfiles/zsh_mac ~/.zsh/zsh_mac.zsh
 ```
 
 # vim setup
