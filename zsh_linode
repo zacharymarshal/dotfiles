@@ -1,3 +1,4 @@
 keychain ~/.ssh/id_rsa.Zacharys-Linode
 source ~/.keychain/Zacharys-Linode-sh
 TERM='xterm-16color'
+GPG_TTY=$(tty)

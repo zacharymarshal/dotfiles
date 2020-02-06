@@ -2,7 +2,7 @@
 
 	name = Zachary Rankin
 	email = rankin.zachary@gmail.com
-  signingkey = 99344343
+	signingkey = CBAFC25A2E5D052B
 
 [alias]
 
@@ -79,3 +79,7 @@
 
 [includeIf "gitdir:/**/kelvineducation/"]
   path = .gitconfig-kelvin
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
