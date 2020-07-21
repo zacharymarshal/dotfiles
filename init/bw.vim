@@ -13,14 +13,16 @@ syntax reset
 
 let g:colors_name="bw"
 
-hi Normal ctermfg=White ctermbg=Black cterm=NONE
+hi Normal ctermfg=White cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=DarkGray cterm=NONE
 hi IncSearch ctermfg=White ctermbg=DarkYellow cterm=NONE
-hi Search ctermfg=White ctermbg=DarkYellow cterm=NONE
+hi Search ctermfg=White ctermbg=Green cterm=NONE
 hi StatusLine ctermfg=Gray ctermbg=DarkGray cterm=NONE
 hi StatusLineNC ctermfg=NONE ctermbg=DarkGray cterm=NONE
-hi Comment ctermfg=Gray
+hi Comment ctermfg=DarkGray
 hi Visual ctermfg=White ctermbg=DarkGray cterm=NONE
+hi LineNr ctermfg=DarkGray
+hi CursorLineNr ctermfg=DarkGray
 " hi VisualNOS NONE
 
 hi Boolean NONE
@@ -157,7 +159,7 @@ hi cssValueTime NONE
 hi cssVendor NONE
 hi CursorColumn NONE
 hi CursorLine NONE
-hi CursorLineNr NONE
+" hi CursorLineNr NONE
 hi Debug NONE
 hi Define NONE
 hi Delimiter NONE
@@ -273,7 +275,7 @@ hi javaScriptValue NONE
 hi javaScrParenError NONE
 hi Keyword NONE
 hi Label NONE
-hi LineNr NONE
+" hi LineNr NONE
 hi LineNrAbove NONE
 hi LineNrBelow NONE
 hi Macro NONE
