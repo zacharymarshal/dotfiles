@@ -1,2 +1,4 @@
 [user]
   email = zach@kelvin.education
+[pull]
+  rebase = true
