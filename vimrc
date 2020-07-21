@@ -131,7 +131,9 @@ color bw
 let html_my_rendering=1
 
 " Numbers
-set nonumber
+" This sets hybrid where absolute number shows instead of zero
+" with relative numbers
+set number relativenumber
 set numberwidth=5
 
 " Save my life
@@ -165,6 +167,15 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
+" Rust settings
+" ------------
+
+augroup filetype_rust
+  autocmd!
+  autocmd BufNewFile,BufRead *.rs set filetype=rust
+  autocmd FileType rust setlocal syntax=txt shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
+augroup END
+
 " PHP settings
 " ------------
 
@@ -197,8 +208,12 @@ autocmd BufNewFile,BufRead *.txt set filetype=markdown
 augroup filetype_go
   autocmd!
   autocmd BufNewFile,BufRead *.go set filetype=go
-  autocmd FileType go setlocal shiftwidth=4 tabstop=4 noexpandtab
+  autocmd FileType go setlocal syntax=txt shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab autoindent
 augroup END
+
+" Make settings
+" ----------
+autocmd FileType make setlocal shiftwidth=4 tabstop=4 noexpandtab
 
 " search settings
 " ---------------
