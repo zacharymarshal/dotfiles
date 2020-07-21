@@ -2,3 +2,6 @@ keychain ~/.ssh/id_rsa.Zacharys-Linode
 source ~/.keychain/Zacharys-Linode-sh
 TERM='xterm-16color'
 export GPG_TTY=$(tty)
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:/usr/local/go/bin:$PATH
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
