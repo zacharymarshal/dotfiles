@@ -16,13 +16,17 @@ let g:colors_name="bw"
 hi Normal ctermfg=White cterm=NONE
 hi ColorColumn ctermfg=NONE ctermbg=DarkGray cterm=NONE
 hi IncSearch ctermfg=White ctermbg=DarkYellow cterm=NONE
-hi Search ctermfg=White ctermbg=Green cterm=NONE
+hi Search ctermfg=White ctermbg=DarkGreen cterm=NONE
 hi StatusLine ctermfg=Gray ctermbg=DarkGray cterm=NONE
 hi StatusLineNC ctermfg=NONE ctermbg=DarkGray cterm=NONE
 hi Comment ctermfg=DarkGray
 hi Visual ctermfg=White ctermbg=DarkGray cterm=NONE
 hi LineNr ctermfg=DarkGray
 hi CursorLineNr ctermfg=DarkGray
+" hi Statement ctermfg=White cterm=bold
+" hi Identifier ctermfg=White cterm=bold
+hi String ctermfg=White cterm=italic
+hi Number ctermfg=White cterm=italic
 " hi VisualNOS NONE
 
 hi Boolean NONE
@@ -331,7 +335,7 @@ hi MoreMsg NONE
 hi Noise NONE
 hi None NONE
 hi NonText NONE
-hi Number NONE
+" hi Number NONE
 hi Operator NONE
 hi Pmenu NONE
 hi PmenuSbar NONE
@@ -357,7 +361,7 @@ hi Statement NONE
 " hi StatusLineTerm NONE
 " hi StatusLineTermNC NONE
 hi StorageClass NONE
-hi String NONE
+" hi String NONE
 hi Structure NONE
 hi TabLine NONE
 hi TabLineFill NONE
