@@ -60,6 +60,8 @@
   added = yellow
   changed = green
   untracked = cyan
+[pull]
+  rebase = true
 
 [push]
   default = simple
