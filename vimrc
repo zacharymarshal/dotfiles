@@ -24,6 +24,8 @@ Plugin 'fatih/vim-go'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 
+Plugin 'hashivim/vim-terraform'
+
 " Plugin 'StanAngeloff/php.vim'
 
 " All of your Plugins must be added before the following line
@@ -111,6 +113,7 @@ if executable('ag')
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag -Q -l --nocolor --ignore-dir .git --hidden -g "" %s'
+  let g:ctrlp_working_path_mode = 'a'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
@@ -225,6 +228,7 @@ set hlsearch  " highlight all matches
 nmap <leader>h :nohlsearch<cr>
 
 set ignorecase " case insensitive search
+set infercase
 set smartcase  " case sensitive mode if I put a capital letter
 
 " vim-surround settings
@@ -236,3 +240,6 @@ nmap <leader>" cs'"
 " Dash
 " --------------------
 nmap <silent> <leader>d <Plug>DashSearch
+
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
