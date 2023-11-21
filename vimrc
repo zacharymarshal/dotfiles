@@ -91,6 +91,9 @@ nmap <leader>" cs'"
 nmap <leader>p :GFiles<CR>
 nmap <leader>pp :Files<CR>
 nmap <leader>P :Buffers<CR>
+nmap <leader>\ :Ag<CR>
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
@@ -99,3 +102,6 @@ autocmd BufNewFile,BufRead *.phtml set filetype=html
 autocmd BufNewFile,BufRead *.vue set filetype=vue
 
 filetype indent off
+
+" Ctags
+set tags=./tags,tags,.git/tags
