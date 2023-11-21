@@ -1,8 +1,8 @@
 [user]
 
 	name = Zachary Rankin
-	email = zach@rknmail.com
-	signingkey = CBAFC25A2E5D052B
+	email = rankin.zachary@gmail.com
+	signingkey = AED8606F90D55DBAE98391B1792C8A2B4BFA9457
 
 [alias]
 
@@ -64,7 +64,8 @@
   rebase = true
 
 [push]
-  default = simple
+  default = current
+  autoSetupRemote = true
 
 [filter "media"]
   required = true
