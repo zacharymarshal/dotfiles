@@ -57,6 +57,9 @@ set colorcolumn=+1
 " OMG save me from this autocomplete trash
 set wildmode=list:longest
 
+" Stupid mouse BS
+set mouse=
+
 syntax on
 color bw
 
@@ -92,6 +95,9 @@ nmap <leader>p :GFiles<CR>
 nmap <leader>pp :Files<CR>
 nmap <leader>P :Buffers<CR>
 nmap <leader>\ :Ag<CR>
+
+" Toggle numbers and relative numbers
+nmap <leader>n :set relativenumber! number!<CR>
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
