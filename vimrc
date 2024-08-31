@@ -19,11 +19,11 @@ set modelines=0
 set nomodeline
 
 " Always show the filename
-set laststatus=2
-set statusline=%t
-set statusline+=%=
-set statusline+=%c,
-set statusline+=%l/%L
+" set laststatus=2
+" set statusline=%t
+" set statusline+=%=
+" set statusline+=%c,
+" set statusline+=%l/%L
 
 " Display characters
 set list listchars=tab:»\ ,trail:·,nbsp:·

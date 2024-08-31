@@ -78,7 +78,7 @@
   required = true
 	process = git-lfs filter-process
 [core]
-  editor = vim
+  editor = nvim
 
 [includeIf "gitdir:/**/kelvineducation/"]
   path = .gitconfig-kelvin
