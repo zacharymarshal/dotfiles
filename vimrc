@@ -99,7 +99,7 @@ nmap <leader>\ :Ag<CR>
 " Toggle numbers and relative numbers
 nmap <leader>n :set relativenumber! number!<CR>
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
@@ -112,3 +112,8 @@ filetype indent off
 
 " Ctags
 set tags=./tags,tags,.git/tags
+
+" fzf
+let g:fzf_vim = {}
+" fzf disable preview window
+let g:fzf_vim.preview_window = []
