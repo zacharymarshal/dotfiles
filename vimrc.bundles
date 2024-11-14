@@ -13,6 +13,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
 Plug 'github/copilot.vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
