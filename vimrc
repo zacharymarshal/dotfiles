@@ -60,12 +60,12 @@ set wildmode=list:longest
 " Stupid mouse BS
 set mouse=
 
-syntax on
-color bw
-
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
+
+syntax on
+colorscheme gruvbox
 
 " Unbind the cursor keys
 nnoremap <Left> :echoe "Use h"<CR>
@@ -94,12 +94,11 @@ nmap <leader>" cs'"
 nmap <leader>p :GFiles<CR>
 nmap <leader>pp :Files<CR>
 nmap <leader>P :Buffers<CR>
-nmap <leader>\ :Ag<CR>
+nmap <leader>\ :Ag 
 
 " Toggle numbers and relative numbers
 nmap <leader>n :set relativenumber! number!<CR>
 
-" let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
@@ -114,6 +113,8 @@ filetype indent off
 set tags=./tags,tags,.git/tags
 
 " fzf
+let $FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+" let $FZF_DEFAULT_COMMAND = 'ag -l --hidden --ignore .git'
 let g:fzf_vim = {}
 " fzf disable preview window
 let g:fzf_vim.preview_window = []

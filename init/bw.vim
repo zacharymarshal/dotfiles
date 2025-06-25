@@ -19,7 +19,7 @@ set notermguicolors
 
 " let g:colors_name="bw"
 "
-hi Normal ctermfg=Gray cterm=NONE ctermbg=NONE
+hi Normal ctermfg=White cterm=NONE ctermbg=NONE
 hi ColorColumn ctermfg=NONE ctermbg=DarkGray cterm=NONE
 hi IncSearch ctermfg=White ctermbg=DarkYellow cterm=NONE
 hi Search ctermfg=White ctermbg=DarkGreen cterm=NONE
