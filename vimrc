@@ -106,6 +106,7 @@ let g:copilot_no_tab_map = v:true
 autocmd BufNewFile,BufRead *.phtml set filetype=html
 autocmd BufNewFile,BufRead *.tmpl set filetype=html
 autocmd BufNewFile,BufRead *.vue set filetype=vue
+autocmd BufNewFile,BufRead *.svelte set filetype=svelte
 
 filetype indent off
 
