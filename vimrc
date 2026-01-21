@@ -60,6 +60,9 @@ set wildmode=list:longest
 " Stupid mouse BS
 set mouse=
 
+" Enable system clipboard
+" set clipboard=unnamedplus
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -105,6 +108,7 @@ let g:copilot_no_tab_map = v:true
 
 autocmd BufNewFile,BufRead *.phtml set filetype=html
 autocmd BufNewFile,BufRead *.tmpl set filetype=html
+autocmd BufNewFile,BufRead *.gohtml set filetype=html
 autocmd BufNewFile,BufRead *.vue set filetype=vue
 autocmd BufNewFile,BufRead *.svelte set filetype=svelte
 
