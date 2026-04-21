@@ -1,0 +1,11 @@
+vim.keymap.set("n", "<Left>", ':echoe "Use h"<CR>')
+vim.keymap.set("n", "<Right>", ':echoe "Use l"<CR>')
+vim.keymap.set("n", "<Up>", ':echoe "Use k"<CR>')
+vim.keymap.set("n", "<Down>", ':echoe "Use j"<CR>')
+
+vim.keymap.set("n", "<leader>e", "<C-^>")
+vim.keymap.set("n", "<leader>o", "o<Esc>")
+vim.keymap.set("n", "<leader>O", "O<Esc>")
+vim.keymap.set("n", "<leader>;", "m`A;<Esc>``")
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.keymap.set("n", "<leader>n", ":set relativenumber! number!<CR>")

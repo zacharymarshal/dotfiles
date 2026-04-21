@@ -61,7 +61,7 @@ set wildmode=list:longest
 set mouse=
 
 " Enable system clipboard
-" set clipboard=unnamedplus
+set clipboard=
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -111,6 +111,11 @@ autocmd BufNewFile,BufRead *.tmpl set filetype=html
 autocmd BufNewFile,BufRead *.gohtml set filetype=html
 autocmd BufNewFile,BufRead *.vue set filetype=vue
 autocmd BufNewFile,BufRead *.svelte set filetype=svelte
+
+" vim-go
+let g:go_fzf_options = ['--preview-window', 'hidden']
+autocmd FileType go nmap <leader>d :GoDecls<CR>
+autocmd FileType go nmap <leader>D :GoDeclsDir<CR>
 
 filetype indent off
 
