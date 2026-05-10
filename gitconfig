@@ -1,88 +1,80 @@
 [user]
-
 	name = Zachary Rankin
 	email = rankin.zachary@gmail.com
 	signingkey = AED8606F90D55DBAE98391B1792C8A2B4BFA9457
 
 [alias]
+	# Cherry pick merge
+	cpm = cherry-pick -m 1 --no-commit
 
-  # Cherry pick merge
-  cpm = cherry-pick -m 1 --no-commit
+	# Nice overall view of the commit log
+	l = log --oneline --graph --decorate --abbrev-commit --all
 
-  # Nice overall view of the commit log
-  l = log --oneline --graph --decorate --abbrev-commit --all
+	# View the current working tree status using the short format
+	s = status -s
 
-  # View the current working tree status using the short format
-  s = status -s
+	# Switch to a branch, creating it if necessary
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-  # Switch to a branch, creating it if necessary
-  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	# Find commits by source code
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
 
-  # Find commits by source code
-  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	# Find commits by commit message
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-  # Find commits by commit message
-  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	# Remove branches that have already been merged with master
+	# a.k.a. 'delete merged'
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-  # Remove branches that have already been merged with master
-  # a.k.a. ‘delete merged’
-  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
-  # Pull
-  p = pull
-
-  # Commit
-  c = commit
-
-  # Push
-  pu = push
-
-  # Checkout
-  co = checkout
+	p = pull
+	c = commit
+	pu = push
+	co = checkout
 	uncommit = reset --soft HEAD^
 	unstage = reset
 
 [color "branch"]
-
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "diff"]
-
-  meta = yellow bold
-  frag = magenta bold # line info
-  old = red # deletions
-  new = green # additions
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
 
 [color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 
-  added = yellow
-  changed = green
-  untracked = cyan
+[core]
+	editor = nvim
+
 [pull]
-  rebase = true
+	rebase = true
 
 [push]
-  default = current
-  autoSetupRemote = true
+	default = current
+	autoSetupRemote = true
 
-[filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-  required = true
-	process = git-lfs filter-process
-[core]
-  editor = nvim
-
-[includeIf "gitdir:/**/kelvineducation/"]
-  path = .gitconfig-kelvin
 [commit]
 	gpgsign = true
+
 [gpg]
 	program = gpg
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[includeIf "gitdir:/**/kelvineducation/"]
+	path = .gitconfig-kelvin
