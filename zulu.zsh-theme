@@ -81,7 +81,7 @@ add-zsh-hook precmd  _cmd_timer_stop
 
 setopt PROMPT_SUBST
 
-PROMPT=$'\n''%F{green}%~%f$(prompt_git)$(work_in_progress)
+PROMPT='%F{green}%~%f$(prompt_git)$(work_in_progress)
 $%(?..%F{red}·%f) '
 
 RPROMPT='%F{244}%m %D{%H:%M:%S}%f${_cmd_duration}'
