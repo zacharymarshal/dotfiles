@@ -85,6 +85,12 @@ zstyle ':completion::complete:git-switch:argument-rest:' tag-order \
 # Shift-Tab cycles backwards through completion menu
 bindkey '^[[Z' reverse-menu-complete
 
+# Word-by-word navigation with Alt/Option + arrows (covers common terminal escapes)
+bindkey '^[[1;3D' backward-word   # Alt-Left  (xterm)
+bindkey '^[[1;3C' forward-word    # Alt-Right (xterm)
+bindkey '^[b'     backward-word   # Meta-b    (traditional)
+bindkey '^[f'     forward-word    # Meta-f    (traditional)
+
 # Prompt theme
 source $HOME/dotfiles/zulu.zsh-theme
 
