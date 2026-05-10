@@ -29,6 +29,8 @@ opt.autoindent = true
 
 opt.incsearch = true
 opt.hlsearch = true
+opt.ignorecase = true
+opt.smartcase = true
 
 opt.splitbelow = true
 opt.splitright = true
