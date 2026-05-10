@@ -30,6 +30,7 @@
 	c = commit
 	pu = push
 	co = checkout
+	ds = diff --staged
 	uncommit = reset --soft HEAD^
 	unstage = reset
 
