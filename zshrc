@@ -11,6 +11,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # Sensible interactive defaults
 setopt AUTO_CD               # type a directory name to cd into it
 setopt INTERACTIVE_COMMENTS  # allow `#` comments in interactive shell
+setopt NO_CASE_GLOB          # case-insensitive globbing
+setopt CORRECT_ALL           # prompt to fix typos in command args (cd Doucments → Documents)
 
 # Aliases
 [ -f $HOME/dotfiles/aliases ] && source $HOME/dotfiles/aliases
