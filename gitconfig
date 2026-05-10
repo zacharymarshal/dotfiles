@@ -26,11 +26,17 @@
 	# a.k.a. 'delete merged'
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-	p = pull
+	a = add
+	ap = add -p
 	c = commit
-	pu = push
 	co = checkout
+	d = diff
 	ds = diff --staged
+	last = show -1
+	p = pull
+	pu = push
+	st = stash
+	stu = stash --include-untracked
 	uncommit = reset --soft HEAD^
 	unstage = reset
 
@@ -53,6 +59,13 @@
 [core]
 	editor = nvim
 
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
+[fetch]
+	prune = true
+
 [pull]
 	rebase = true
 
@@ -60,8 +73,18 @@
 	default = current
 	autoSetupRemote = true
 
+[branch]
+	sort = -committerdate
+
+[column]
+	ui = auto
+
+[help]
+	autocorrect = prompt
+
 [commit]
 	gpgsign = true
+	verbose = true
 
 [gpg]
 	program = gpg
