@@ -76,6 +76,7 @@ source $HOME/dotfiles/zulu.zsh-theme
 # Environment
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
+export GPG_TTY=$(tty)
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
