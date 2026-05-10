@@ -1,18 +1,24 @@
 \set QUIET 1
 
-\set HISTFILE ~/.psql/history- :DBNAME
+\set HISTFILE ~/.psql/history- :DBNAME - :PORT
 \set HISTSIZE 1000000
 \set HISTCONTROL ignoredups
 
 \set ON_ERROR_ROLLBACK interactive
 \set COMP_KEYWORD_CASE upper
+\set VERBOSITY verbose
+\set SHOW_CONTEXT errors
+
+\setenv PSQL_EDITOR 'nvim'
+\setenv PAGER 'less -SRXF'
+\setenv LESS '-iMSx4 -FXR'
 
 \x auto
 \pset linestyle unicode
 \pset border 2
-\pset null ∅
+\pset null ␀
 \pset format wrapped
-\pset pager off
+\pset pager on
 \timing
 
 \unset QUIET
