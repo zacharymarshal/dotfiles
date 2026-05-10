@@ -24,6 +24,36 @@ autoload -Uz compinit && compinit
 compdef g=git
 compdef h=history
 
+# Nudge toward git aliases when typing the long form (only at the top-level prompt;
+# skipped when git is called from prompts, scripts, or other functions).
+git() {
+  if (( ${#funcstack} <= 1 )); then
+    local hint=""
+    case "$1 $2" in
+      "add -p"*)                    hint="ap" ;;
+      "diff --staged"*)             hint="ds" ;;
+      "stash --include-untracked"*) hint="stu" ;;
+    esac
+    if [[ -z "$hint" ]]; then
+      case "$1" in
+        add)      hint="a"  ;;
+        commit)   hint="c"  ;;
+        checkout) hint="co" ;;
+        diff)     hint="d"  ;;
+        pull)     hint="p"  ;;
+        push)     hint="pu" ;;
+        stash)    hint="st" ;;
+        status)   hint="s"  ;;
+      esac
+    fi
+    if [[ -n "$hint" ]]; then
+      print -P "%F{yellow}use: g $hint%f" >&2
+      return 1
+    fi
+  fi
+  command git "$@"
+}
+
 # Highlighted, navigable completion menu
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
