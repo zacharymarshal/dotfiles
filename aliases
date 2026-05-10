@@ -1,10 +1,10 @@
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" #	 `cd` is probably faster to type though
-alias -- -="cd -"
+alias ..="builtin cd .."
+alias ...="builtin cd ../.."
+alias ....="builtin cd ../../.."
+alias .....="builtin cd ../../../.."
+alias ~="builtin cd ~" #	 `cd` is probably faster to type though
+alias -- -="builtin cd -"
 
 # Shortcuts
 alias g="git"
@@ -46,3 +46,6 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 
 alias gwip="git add -A; git ls-files --deleted -z | xargs ${XARGS_OPTS} -0 git rm; git commit -m \"--wip--\""
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+
+# Stage everything and commit (opens editor)
+alias gac='g a -A && g c'

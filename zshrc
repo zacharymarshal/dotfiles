@@ -54,6 +54,21 @@ git() {
   command git "$@"
 }
 
+# Nudge toward the .. / ... / .... aliases when typing `cd ..`, `cd ../..`, etc.
+# (only at the top-level prompt; skipped inside scripts or other functions).
+cd() {
+  if (( ${#funcstack} <= 1 )) && (( $# == 1 )); then
+    if [[ "$1" =~ ^\.\.(/\.\.)*/?$ ]]; then
+      local segments=("${(@s:/:)${1%/}}")
+      local hint=""
+      repeat $(( ${#segments} + 1 )) hint+="."
+      print -P "%F{yellow}use: $hint%f" >&2
+      return 1
+    fi
+  fi
+  builtin cd "$@"
+}
+
 # Highlighted, navigable completion menu
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
