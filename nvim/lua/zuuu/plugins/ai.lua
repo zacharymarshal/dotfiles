@@ -12,4 +12,8 @@ require("copilot").setup({
       dismiss = "<C-]>",
     },
   },
+  filetypes = {
+    yaml = true,
+    markdown = true,
+  },
 })
